@@ -1,0 +1,15 @@
+---
+- name: update web servers
+  hosts: all
+  become: yes
+  
+
+  tasks:
+  - name: ensure zip is installed
+    apt:
+      name: zip
+      state: latest
+  - name: ensure vim is installed
+    apt:
+      name: vim
+      state: latest 
